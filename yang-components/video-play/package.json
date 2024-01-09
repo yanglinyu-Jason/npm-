@@ -1,0 +1,21 @@
+{
+  "name": "video-play",
+  "private": true,
+  "version": "1.1.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "flv.js": "^1.6.2",
+    "less": "^4.2.0",
+    "linyu": "^2.0.1",
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "vite": "^5.0.8"
+  }
+}

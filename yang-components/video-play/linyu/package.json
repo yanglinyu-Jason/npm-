@@ -1,0 +1,13 @@
+{
+  "name": "linyu",
+  "private": false, 
+  "version": "2.0.1",
+  "description": "",
+  "main": "linyu-ui.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["linyu","linyu-ui","LINYU","Linyu"],
+  "author": "",
+  "license": "ISC"
+}
