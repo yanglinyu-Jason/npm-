@@ -25,7 +25,6 @@ main.js
       stashInitialSize: 128,
      
 }"></video-play-flv>
-
  flv  videoType: flv或mp4
 <video-play-m3u8
     :source="source"
@@ -33,6 +32,26 @@ main.js
     :options="options"
     :forbidFastForward="forbidFastForward"
     />
+
+flv2: option:{
+    url: item.url,
+    type: 'flv',
+    isLive: true,
+    hasAudio: false,
+    cors: true,
+    elementId: `video-contianer-1`,
+}
+    <video-play-flv2
+      :option="{
+        url: item.url,
+        type: 'flv',
+        isLive: true,
+        hasAudio: false,
+        cors: true,
+        elementId: `video-contianer-${index}`,
+      }"
+    >
+    </video-play-flv2>
 
 
 

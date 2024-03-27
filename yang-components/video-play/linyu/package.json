@@ -1,7 +1,7 @@
 {
   "name": "linyu",
   "private": false, 
-  "version": "2.0.1",
+  "version": "2.1.2",
   "description": "",
   "main": "linyu-ui.js",
   "scripts": {

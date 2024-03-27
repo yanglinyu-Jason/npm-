@@ -77,15 +77,41 @@
       stashInitialSize: 128,
      
     }"></video-play-flv> -->
-  <video-play-haikan :listData="channelWarnVideoArr"></video-play-haikan>
+  <div v-for="(item, index) in videoList" :key="index">
+    <video-play-flv2
+      :option="{
+        url: item.url,
+        type: 'flv',
+        isLive: true,
+        hasAudio: false,
+        cors: true,
+        elementId: `video-contianer-${index}`,
+      }"
+    >
+    </video-play-flv2>
+
+    <span @click="set()">1111111111</span>
+  </div>
 </template>
 <script setup>
-// import videoPlayHaikan from "../src/components/video-play-haikan/index.vue";
+// import videoPlayFlv2 from "./components/video-play-flv2/index.vue";
 import { ref, onMounted, reactive } from "vue";
 let VueAliplayerV3 = ref(null);
 let options = reactive({
   isLive: !true, //切换为直播流的时候必填
 });
+
+let videoList = reactive([
+  {
+    url: `http://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/flv/xgplayer-demo-360p.flv`,
+  },
+]);
+
+const set = () => {
+  videoList.push({
+    url: "http://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/flv/xgplayer-demo-360p.flv",
+  });
+};
 
 let source = ref(
   "http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8"
